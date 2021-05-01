@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int length(char*);
+int main()
+{
+	char a[]="suyash goswami!!!";
+	int res=length(a);
+	printf("%d",res);
+}
+
+int length(char *a)
+{
+	static int len=0;
+
+	if(*a!=NULL)
+	{
+		len++;
+		length(++a);
+	}
+	else
+	return len;
+}

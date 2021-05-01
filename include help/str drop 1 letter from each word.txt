@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+	char a[]="string with lots of words";
+	char b[40];
+	int i,j=0;
+	for(i=1;i<strlen(a);i++)
+	{
+		b[j]=a[i];
+		if(a[i]==' '&&a[i+1]!=' ')
+		i++;
+		j++;
+	}
+	printf("%s",b);
+}

@@ -1,0 +1,24 @@
+#include<stdio.h>
+unsigned long fact(int);
+int main()
+{
+	int n;
+	printf("Enter a number\t");
+	scanf("%d",&n);
+	float sum=0;
+	for(int i=1;i<=n;i++)
+	{
+	sum = sum + ( (float)(i) / (float)(fact(i)) );
+	}
+	printf("%f",sum);
+}
+unsigned long fact(int num)
+{
+	int i;
+	unsigned long fact=1;
+	
+	for(i=num; i>=1; i--)
+		fact= fact*i;
+
+	return fact;
+}

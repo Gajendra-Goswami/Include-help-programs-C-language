@@ -1,0 +1,22 @@
+#include<math.h>
+#include<stdio.h>
+void convert(long long);
+int main()
+{
+	long long n;
+	printf("Enter a octal number");
+	scanf("%lld",&n);
+	convert(n);
+}
+void convert(long long n)
+{
+	int octal=0,i=0,rem;
+	while(n!=0)
+	{
+		rem=n%10;
+		n=n/10;
+		octal=octal+rem*pow((double)8,(double)i);
+		++i;
+	}
+	printf("%lld",octal);
+}

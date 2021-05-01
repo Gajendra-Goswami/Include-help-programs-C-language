@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+void fib(int);
+main()
+{
+	int n3,n1=0,n2=1;
+	int num;
+	printf("enter terns\n");
+	scanf("%d",&num);
+	printf("%d\t%d\t",n1,n2);
+
+	fib(num);
+}
+
+void fib(int num)
+{
+	static int n3,n1=0,n2=1;
+if(num>2){
+
+			n3=n1+n2;
+		printf("%d\t",n3);
+			n1=n2;
+		n2=n3;
+		fib(num-1);
+		
+}
+}
